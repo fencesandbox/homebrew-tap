@@ -5,21 +5,21 @@
 class Fence < Formula
   desc "Lightweight, container-free sandbox for running commands with network and filesystem restrictions"
   homepage "https://github.com/fencesandbox/fence"
-  version "0.1.65"
+  version "0.1.66"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fencesandbox/fence/releases/download/v0.1.65/fence_0.1.65_Darwin_x86_64.tar.gz"
-      sha256 "77d588ed7faf6a53cbe141a3e547086d972f4c023dbb1be3f73f7da8c97d294e"
+      url "https://github.com/fencesandbox/fence/releases/download/v0.1.66/fence_0.1.66_Darwin_x86_64.tar.gz"
+      sha256 "4c3099886711efcc196fed83f7a22d2917e9be9cb7b21e0949fff867363cfd69"
 
       define_method(:install) do
         bin.install "fence"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fencesandbox/fence/releases/download/v0.1.65/fence_0.1.65_Darwin_arm64.tar.gz"
-      sha256 "0f2f7f564a9c6ed37c250504f7e620e81c2be5a81b5a3f6ba00b0c83d5a16c02"
+      url "https://github.com/fencesandbox/fence/releases/download/v0.1.66/fence_0.1.66_Darwin_arm64.tar.gz"
+      sha256 "cdac9e27379c601a1b4bd01000b3eacc5aea0bd8e3fa0b012356333c80aed447"
 
       define_method(:install) do
         bin.install "fence"
@@ -29,15 +29,15 @@ class Fence < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fencesandbox/fence/releases/download/v0.1.65/fence_0.1.65_Linux_x86_64.tar.gz"
-      sha256 "cff79c98145d78f3158a075d4d8bb770bfcec0ed869e5730fa90ffea9f561127"
+      url "https://github.com/fencesandbox/fence/releases/download/v0.1.66/fence_0.1.66_Linux_x86_64.tar.gz"
+      sha256 "09ac7fa27bfa80c06ce5da074abe6c7b498c42df3c95acad5e052d7dfd926830"
       define_method(:install) do
         bin.install "fence"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fencesandbox/fence/releases/download/v0.1.65/fence_0.1.65_Linux_arm64.tar.gz"
-      sha256 "57a4c6d293678cf3fe00cca923d2b2df2b53675195765e5e22ba557a9517d4e6"
+      url "https://github.com/fencesandbox/fence/releases/download/v0.1.66/fence_0.1.66_Linux_arm64.tar.gz"
+      sha256 "2eeba73c7ddf138da9e646c7a57f7e2d37c4e4443beeb7f846151c580e1374f7"
       define_method(:install) do
         bin.install "fence"
       end
